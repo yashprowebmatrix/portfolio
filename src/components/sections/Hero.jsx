@@ -1,5 +1,6 @@
 import BackgroundVideo from "../common/BgVid";
 import heroImg from "../../assets/mobile/hero.webp";
+import heroVideoPoster from "../../assets/hero-video-poster.jpg";
 import BackgroundImage from "../common/BgPic";
 
 const Hero = () => {
@@ -10,7 +11,7 @@ const Hero = () => {
      <div className="overflow-hidden hidden md:block absolute inset-0 -z-40">
         <BackgroundVideo
           source="https://www.pexels.com/download/video/27554375/"
-          poster={heroImg}
+          poster={heroVideoPoster}
         />
       </div>
      <div className="overflow-hidden block md:hidden absolute inset-0 -z-40">
