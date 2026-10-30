@@ -61,7 +61,7 @@ const Fifth = () => {
             <div key={index} className="border border-white/30 bg-(--fground) hover:bg-(--fground-highlighted) hover:cursor-default p-2 px-3 rounded-lg  w-1/2 group hover:border-(--gold-highlight)"
             data-motion={index==0?"float-top-left":"float-top-right"}
             >
-              <h3 className='group-hover:text-(--font-color-s1)' style={{fontSize:"var(--font-size-medium)"}}>{item.title}</h3>
+              <h3 className='text-(--font-color) group-hover:text-(--font-color-s1)' style={{fontSize:"var(--font-size-medium)"}}>{item.title}</h3>
               <div className="flex flex-col gap-1.5 mt-1">
               {item.items.map((el,ind)=>(
                 <div key={index+ind} className="flex relative px-1">
@@ -77,7 +77,7 @@ const Fifth = () => {
             fifthData.filter((_,index)=>(index === fifthData.length-1))
             .map((item,index)=>(
               <div key={index} className="border border-white/30 bg-(--fground) hover:bg-(--fground-highlighted) hover:cursor-default p-2 px-3 rounded-lg  w-full group hover:border-(--gold-highlight)">
-              <h3 className='group-hover:text-(--font-color-s1) ' style={{fontSize:"var(--font-size-medium)"}}>{item.title}</h3>
+              <h3 className='text-(--font-color) group-hover:text-(--font-color-s1)' style={{fontSize:"var(--font-size-medium)"}}>{item.title}</h3>
               </div>
             ))
           }

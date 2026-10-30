@@ -22,7 +22,7 @@ export function createScrollScene(
             end: `+=${sections.length * 250}%`,
             pin: true,
             scrub: true,
-            markers: true,
+            markers: false,
         },
     });
 

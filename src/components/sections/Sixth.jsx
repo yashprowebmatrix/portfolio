@@ -33,11 +33,11 @@ const Sixth = () => {
                 <div className='w-fit flex flex-col gap-2 mt-12 border-t pt-4 border-(--gold-highlight)' style={{fontSize:"var(--font-size-small)"}} data-motion="float-up">
                   <div className="pl-2 relative">
                     <div className="w-2 h-2 bg-(--gold-primary) absolute top-2 -left-1"></div>
-                    <h3>While others planned the next quarter, I was already building the next decade</h3>
+                    <h3 className="text-(--font-color) transition-colors hover:text-(--gold-light)">While others planned the next quarter, I was already building the next decade</h3>
                   </div>
                    <div className="pl-2 relative">
                     <div className="w-2 h-2 bg-(--gold-primary) absolute top-2 -left-1"></div>
-                    <h3>I didn't come to compete. I came to rewrite teh game.</h3>
+                    <h3 className="text-(--font-color) transition-colors hover:text-(--gold-light)">I didn't come to compete. I came to rewrite teh game.</h3>
                   </div>
                 </div>
                </div>

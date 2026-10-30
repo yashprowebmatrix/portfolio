@@ -9,7 +9,7 @@ const Seventh = () => {
       data-motion="float-top"
     >
       <div data-motion="fade" className="absolute inset-0 -z-10 opacity-10">
-                    <BackgroundImage source={image2} />
+                    <div data-motion="float-down" className="scale-80"><BackgroundImage source={image2} /></div>
                   </div>
                   <div className="md:hidden absolute inset-0 -z-10 opacity-10 flex flex-col overflow-x-hidden">
                     <div data-motion="fade" className="w-full ">

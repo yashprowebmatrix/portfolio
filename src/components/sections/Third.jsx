@@ -34,21 +34,21 @@ const Third = () => {
             {/** upper container */}
             <div className="flex w-full h-full p-4 gap-4 justify-between">
                 {/** first card */}
-                <div className="flex flex-col items-center justify-between p-4 relative bg-(--fground) border-white/20 border hover:border-(--gold-primary) hover:cursor-default hover:bg-(--fground-highlighted)" data-motion="float-down">
+                <div className="flex flex-col items-center justify-between p-4 relative bg-(--fground) border-white/20 border hover:border-(--gold-primary) hover:cursor-default hover:bg-(--fground-highlighted) group" data-motion="float-down">
                     <div className="w-1/8 border-t-4 border-(--gold-primary) absolute top-0 left-0"></div>
                 <div className="flex w-full items-center justify-between">
                     <h3 className=" flex items-center gap-2 text-(--gold-primary)" style={{fontSize:"var(--font-size-xsmall)"}}><div className="w-2 aspect-square bg-(--gold-primary)"></div>IN-HOUSE // SYSTEM</h3>
                     <h3 className="text-white/60">EST. 2021</h3>
                 </div>
                 <div>
-                    <h3 className="relative" style={{fontSize:'var(--font-size-large)'}}>matrix.
+                    <h3 className="relative text-(--font-color) group-hover:text-(--font-color-s1)" style={{fontSize:'var(--font-size-large)'}}>matrix.
                         <div className="w-1/6 absolute bottom-2 bg-(--gold-primary) h-1"></div>
                     </h3>
                     
                     <h3 className="text-(--gold-primary)" style={{fontSize:"var(--font-size-medium)"}}>Built.</h3>
                 </div>
                 <div className="flex w-full items-center justify-between">
-                    <h3>5 INTERLOCKING DISCIPLINES</h3>
+                    <h3 className="text-(--font-color) group-hover:text-(--gold-light)">5 INTERLOCKING DISCIPLINES</h3>
                     <div className="border-(--gold-light) w-8 aspect-square rounded-full p-4 flex items-center justify-center"><div className="bg-(--gold-light) rounded-full"></div></div>
                 </div>
                 </div>
