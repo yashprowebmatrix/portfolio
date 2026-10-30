@@ -8,7 +8,10 @@ const Hero = () => {
   return (  
     <div className="relative h-screen flex flex-col md:block  justify-center">
      <div className="overflow-hidden hidden md:block absolute inset-0 -z-40">
-        <BackgroundVideo source="https://www.pexels.com/download/video/27554375/"/>
+        <BackgroundVideo
+          source="https://www.pexels.com/download/video/27554375/"
+          poster={heroImg}
+        />
       </div>
      <div className="overflow-hidden block md:hidden absolute inset-0 -z-40">
       <BackgroundImage source={heroImg} />

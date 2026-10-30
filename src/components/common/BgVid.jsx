@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from '../../library/gsap';
 
-export default function BackgroundVideo({source}) {
+export default function BackgroundVideo({ source, poster }) {
   const videoRef = useRef(null);
 
   useEffect(() => {
@@ -45,16 +45,19 @@ export default function BackgroundVideo({source}) {
     <video
       ref={videoRef}
       src={source}
+      poster={poster}
       autoPlay
       muted
       loop
       playsInline
-      className="scale-110"
+      className="h-full w-full scale-110 object-cover"
       style={{
         position: 'absolute',
         top: '50%',
         left: '50%',
         width: '100%',
+        height: '100%',
+        objectFit: 'cover',
         pointerEvents: 'none',
       }}
     />
