@@ -1,12 +1,20 @@
 import image from '../../assets/chap6.jpg';
+import image2 from '../../assets/mobile/sixth.webp';
 import BackgroundImage from '../common/BgPic';
 const Sixth = () => {
   return (
-    <div className="h-screen relative flex items-center" data-motion="float-bottom">
-               <div data-motion="fade" className="opacity-20 absolute w-full h-full scale-105 hidden md:block -z-40"><BackgroundImage source={image}/></div>
-               <div className="flex flex-col justify-around md:h-2/3 h-full">
+    <div className="md:h-screen relative flex items-center" data-motion="float-bottom">
+               <div data-motion="fade" className="absolute inset-0 -z-10 opacity-10">
+                             <BackgroundImage source={image2} />
+                           </div>
+                           <div className="md:hidden absolute inset-0 -z-10 opacity-10 flex flex-col overflow-x-hidden">
+                             <div data-motion="fade" className="w-full ">
+                               <BackgroundImage source={image} />
+                             </div>
+                           </div>
+               <div className="flex flex-col md:justify-around md:h-2/3 h-fit gap-2 md:gap-0">
 
-                <h3 className="font-tag text-(--gold-primary) border rounded-xl border-(--gold-primary) w-fit p-1 px-2 bg-(--fground-highlighted)" style={{fontSize:""}} data-motion="float-down">ACT 6 // ARCHIVAL DOSSIER • THE RESISTANCE</h3>
+                <h3 className="font-tag text-(--gold-primary) border rounded-xl border-(--gold-primary) w-fit p-1 px-2 bg-(--fground-highlighted)" style={{fontSize:"var(--font-size-small)"}} data-motion="float-down">ACT 6 // ARCHIVAL DOSSIER • THE RESISTANCE</h3>
 
                 <div className='my-6'>
                   <div className="relative pl-3" data-motion="float-left">

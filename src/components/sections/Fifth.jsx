@@ -1,13 +1,18 @@
 import {fifthData} from '../../config/fifthConfig';
-import BgPic from '../common/BgPic';
-import chap5 from '../../assets/chap5.jpg';
+import BackgroundImage from '../common/BgPic';
+import image from '../../assets/chap5.jpg';
+import image2 from '../../assets/mobile/fifth.webp';
 const Fifth = () => {
   return (
     <div className="h-screen flex flex-col items-center pb-10 md:flex-row justify-around relative" data-motion="float-right">
-      <div data-motion="fade" className="opacity-20 absolute w-full h-full scale-105 hidden md:block brightness-50"
-      >
-        <BgPic source={chap5}/>
-      </div>
+ <div data-motion="fade" className="absolute inset-0 -z-10 opacity-10">
+               <BackgroundImage source={image2} />
+             </div>
+             <div className="md:hidden absolute inset-0 -z-10 opacity-10 flex flex-col overflow-x-hidden">
+               <div data-motion="fade" className="w-full ">
+                 <BackgroundImage source={image} />
+               </div>
+             </div>
       <div className="md:w-1/2 flex flex-col gap-4">
         <h3
           className="text-(--gold-primary) border rounded-xl border-(--gold-primary) w-fit p-1 px-2 bg-(--fground-highlighted)"

@@ -1,16 +1,17 @@
 import FCard from "../common/cards/FCard";
 import { fData } from "../../config/firstConfig";
 import BackgroundImage from "../common/BgPic";
-import image from "../../assets/mobile/first.jpg";
+import image from "../../assets/mobile/first.webp";
+import image2 from '../../assets/chap1.webp';
 const First = () => {
   return (
     <div
       className="overflow-x-hidden md:overflow-x-visible  md:w-full flex md:flex-row flex-col items-center md:justify-between relative min-h-full gap-10 md:gap-0 md:h-screen "
       data-motion="float-right"
     >
-     { <div data-motion="fade" className="absolute inset-0 -z-10 opacity-10">
-        <BackgroundImage source="https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-      </div>}
+     <div data-motion="fade" className="absolute inset-0 -z-10 opacity-10">
+        <BackgroundImage source={image2} />
+      </div>
       <div className="md:hidden absolute inset-0 -z-10 opacity-10 flex flex-col overflow-x-hidden">
         <div data-motion="fade" className="w-full ">
           <BackgroundImage source={image} />

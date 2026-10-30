@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Replace example.com before deployment.
-Sitemap: https://example.com/sitemap.xml
+# Add the production sitemap URL here when the public domain is configured.

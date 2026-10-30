@@ -157,7 +157,21 @@ export default function ConsultModal({ onClose, apiBaseUrl = "", lenis }) {
     html.style.overflow = "hidden";
     lenisInstance?.stop();
 
+    // Some smooth-scroll setups can continue handling input events even when
+    // the document is overflow-locked. Block those events outside the panel,
+    // while keeping the panel's own scrolling available.
+    const preventPageScroll = (event) => {
+      if (!panelRef.current?.contains(event.target)) {
+        event.preventDefault();
+      }
+    };
+
+    document.addEventListener("wheel", preventPageScroll, { passive: false });
+    document.addEventListener("touchmove", preventPageScroll, { passive: false });
+
     return () => {
+      document.removeEventListener("wheel", preventPageScroll);
+      document.removeEventListener("touchmove", preventPageScroll);
       body.style.overflow = prev.bodyOverflow;
       html.style.overflow = prev.htmlOverflow;
       body.style.paddingRight = prev.bodyPaddingRight;

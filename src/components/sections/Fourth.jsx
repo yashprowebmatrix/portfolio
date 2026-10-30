@@ -1,5 +1,6 @@
 import BackgroundImage from "../common/BgPic";
 import image from "../../assets/chap4.jpg";
+import image2 from "../../assets/mobile/fourth.webp";
 import { useRef } from "react";
 import { companies } from "../../config/companyConfig";
 
@@ -21,9 +22,14 @@ const Fourth = () => {
       data-motion="float-down"
       ref={containerRef}
     >
-      <div data-motion="fade" className="absolute inset-0 -z-50 opacity-10">
-        <BackgroundImage source={image} />
-      </div>
+      <div data-motion="fade" className="absolute inset-0 -z-10 opacity-10">
+                    <BackgroundImage source={image2} />
+                  </div>
+                  <div className="md:hidden absolute inset-0 -z-10 opacity-10 flex flex-col overflow-x-hidden">
+                    <div data-motion="fade" className="w-full ">
+                      <BackgroundImage source={image} />
+                    </div>
+                  </div>
 
       <div className="w-full flex  flex-col items-left gap-6 md:gap-4 h-[60%]">
         <h3
@@ -78,17 +84,17 @@ const Fourth = () => {
               “ This wasn't a portfolio. It was an ecosystem. ”
             </h3>
           </div>
-          <div className="flex flex-wrap w-[90%] mx-auto md:mx-0 md:w-3/5 min-h-28 gap-2 md:justify-around items-center" data-motion="float-up" >
+          <div className="flex flex-wrap w-[90%] mx-auto md:mx-0 md:w-3/5 min-h-28 gap-2 items-center" data-motion="float-up" >
             {companies.map((item, index) => {
               const random = Math.random;
               return (
                 <div
-                  className="w-16 h-16 relative rounded-lg overflow-hidden border-gray-400 border hover:border-(--gold-primary) z-10"
+                  className="w-16 h-16 relative rounded-lg overflow-hidden border-gray-400 border hover:border-(--gold-primary) z-10 p-1 bg-black"
                   key={index}
                   style={{ margin: `${random * 20}px` }}
                   data-motion="rotate-in"
                 >
-                  <img src={item.logo} alt={item.name} />
+                  <img src={item.logo} alt={item.name} className="w-full h-full object-cover"/>
                 </div>
               );
             })}

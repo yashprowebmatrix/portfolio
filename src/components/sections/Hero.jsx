@@ -1,5 +1,5 @@
 import BackgroundVideo from "../common/BgVid";
-import heroImg from "../../assets/mobile/hero.jpg";
+import heroImg from "../../assets/mobile/hero.webp";
 import BackgroundImage from "../common/BgPic";
 
 const Hero = () => {
