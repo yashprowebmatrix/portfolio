@@ -53,8 +53,12 @@ const validate = (f) => {
   const e = {};
   if (f.fullName.trim().length < 2) e.fullName = "Enter your full name.";
   if (!/^\S+@\S+\.\S+$/.test(f.email)) e.email = "Enter a valid email address.";
-  if (f.phone.replace(/\D/g, "").length < 7)
-    e.phone = "Enter a phone number with at least 7 digits.";
+  const phoneDigits = f.phone.replace(/\D/g, "");
+  const indianMobileDigits = phoneDigits.startsWith("91") && phoneDigits.length === 12
+    ? phoneDigits.slice(2)
+    : phoneDigits;
+  if (!/^[6-9]\d{9}$/.test(indianMobileDigits))
+    e.phone = "Enter a valid 10-digit Indian mobile number (or include +91).";
   if (!f.serviceId) e.serviceId = "Choose a service.";
   if (!f.date) e.date = "Pick a date.";
   else if (f.date < todayISO()) e.date = "Pick a date from today onwards.";
@@ -430,6 +434,7 @@ export default function ConsultModal({ onClose, apiBaseUrl = "", lenis }) {
                     name="phone"
                     type="tel"
                     autoComplete="tel"
+                    placeholder="9876543210 or +91 9876543210"
                     value={form.phone}
                     onChange={set("phone")}
                     aria-invalid={!!errors.phone}
