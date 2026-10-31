@@ -37,7 +37,7 @@ const Sixth = () => {
                   </div>
                    <div className="pl-2 relative">
                     <div className="w-2 h-2 bg-(--gold-primary) absolute top-2 -left-1"></div>
-                    <h3 className="text-(--font-color) transition-colors hover:text-(--gold-light)">I didn't come to compete. I came to rewrite teh game.</h3>
+                    <h3 className="text-(--font-color) transition-colors hover:text-(--gold-light)">I didn't come to compete. I came to rewrite the game.</h3>
                   </div>
                 </div>
                </div>
