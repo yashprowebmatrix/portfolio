@@ -130,7 +130,7 @@ The production domain has not been supplied in this repository. Before launch:
 1. Add the absolute canonical URL and `og:url` to [index.html](./index.html).
 2. Replace the placeholder state in [sitemap.xml](./public/sitemap.xml) with the live site URL and last-modified date.
 3. Add the live sitemap URL to [robots.txt](./public/robots.txt).
-4. Add a real social preview image if link previews are required.
+4. Set the absolute production URL for `og:image` and `twitter:image` in [index.html](./index.html); the current preview image is in [public/og-image.jpg](./public/og-image.jpg).
 
 ## Deployment checklist
 
